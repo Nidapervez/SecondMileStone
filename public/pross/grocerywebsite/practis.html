@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Include Tailwind CSS -->
+ 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Custom Styles -->
+    <style>
+      .custom-background {
+        background-image: url('1.jpg'); /* Path to the image */
+        background-size: 500px 500px; /* Set specific size for the image */
+        background-position: center; /* Centers the image in the container */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        width: 100%; /* Full width of the parent container */
+        height: 100vh; /* Full viewport height */
+      }
+    </style>
+</head>
+<body>
+   
+    <header class="bg-yellow-500 p-4 text-cyan-50">
+      <h6>Welcome to Nidz Grocery</h6>
+  </header>
+  <nav class="bg-yellow-500 text-cyan-50">
+      <div class="container mx-auto flex justify-between items-center p-4">
+          <span class="text-xl font-bold">NidzGrocery</span>
+          <ul class="flex space-x-4">
+              <li class="relative dropdown">
+                  <a href="#" class="hover:bg-black px-3 py-2 rounded">Home</a>
+              </li>
+              <li class="relative dropdown">
+                  <a href="#" class="hover:bg-black px-3 py-2 rounded">Contact Us</a>
+                  <ul class="dropdown-menu absolute hidden bg-purple-500 text-white p-2 mt-2 space-y-2 rounded">
+                      <li><a href="#" class="block px-3 py-2 hover:bg-purple-600 rounded">One</a></li>
+                      <li><a href="#" class="block px-3 py-2 hover:bg-purple-600 rounded">Two</a></li>
+                      <li><a href="#" class="block px-3 py-2 hover:bg-purple-600 rounded">Three</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="#" class="ml-4 hover:bg-black px-3 py-2 rounded">Info</a>
+              </li>
+              <li>
+                  <a href="#" class="ml-4 hover:bg-black px-3 py-2 rounded">About</a>
+              </li>
+          </ul>
+      </div>
+  </nav>
+</body>
+</html>
+
+
+      
+ 
+    <!-- Background Image Container -->
+    <div class="custom-background h-screen">
+        <!-- Your content here -->
+    </div>
+    
+</body>
+</html>

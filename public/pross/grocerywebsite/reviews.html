@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - NidzGrocery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: black;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .nav-brand strong {
+            color: #4CAF50;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: black;
+            background-color: white;
+            border-radius: 4px;
+        }
+
+        main {
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+
+        h1, h2 {
+            color: #4CAF50;
+        }
+
+        .review-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .review-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .review-card img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .review-card h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .review-card p {
+            color: #555;
+            text-align: center;
+        }
+
+        .review-stars {
+            color: gold;
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Customer Reviews</h1>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <div class="nav-brand">
+                <strong>Nidz</strong> <strong>Grocery</strong>
+            </div>
+            <div>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="features.html" class="nav-link">Features</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="categories.html" class="nav-link">Categories</a>
+                <a href="reviews.html" class="nav-link">Reviews</a>
+                <a href="#" class="nav-link" id="loginButton">Login</a>
+                <a href="#" class="nav-link" style="font-size: 1.5em;">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <h2>What Our Customers Say</h2>
+        
+        <!-- Review 1 -->
+        <div class="review-card">
+            <img src="44.jpg" alt="Customer 1">
+            <h3>Jane Doe</h3>
+            <div class="review-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p>"Great selection of fresh produce. The delivery was fast and the quality was top-notch. Highly recommend!"</p>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card">
+            <img src="11.jpg" alt="Customer 2">
+            <h3>John Smith</h3>
+            <div class="review-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p>"Excellent service and amazing variety of products. The quality is consistently high. I’m a regular customer now."</p>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card">
+            <img src="22.jpg" alt="Customer 3">
+            <h3>Emily Johnson</h3>
+            <div class="review-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <p>"Good variety and reasonable prices. The only downside is the delivery could be faster, but overall a solid choice."</p>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="review-card">
+            <img src="33.avif" alt="Customer 4">
+            <h3>Michael Brown</h3>
+            <div class="review-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p>"Fantastic grocery store with a wide range of products. The staff is friendly and helpful. Will definitely shop here again."</p>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NidzGrocery. All rights reserved.</p>
+    </footer>
+</body>
+</html>

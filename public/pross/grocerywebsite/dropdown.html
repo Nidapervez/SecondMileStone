@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Include Tailwind CSS -->
+ 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+        <body class="justify-center flex items-center h-screen bg-gray-500 select-none">
+            <div class="relative" id="dropdownButton">
+            <div 
+            onclick="toggleDropdown()"
+            class="border-solid border-black border-[1px] rounded w-20 px-5 py-2 cursor-pointer font-bold">
+                
+                
+                <div>Option</div>
+                
+            </div><div 
+            id="dropdown"
+            class=" bg-white rounded border-black border-[1px]  absolute top-[40px] p-4 hidden">
+                <div class="cursor-pointer hover:bg-slate-600">Accountsetting</div>
+                <div class="cursor-pointer hover:bg-slate-600">Support</div>
+                <div class="cursor-pointer hover:bg-slate-600">Lisence </div>
+                <div class="cursor-pointer hover:bg-slate-600">SignOut</div>
+            </div></div>
+            <script>
+                function toggleDropdown(){
+                    let dropdown=document.querySelector('#dropdownButton #dropdown');
+                    dropdown.classList.toggle("hidden")
+                }
+            </script>
+        </body>
+  </html>

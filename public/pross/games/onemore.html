@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nidzgames</title>
+
+    <!-- Include Tailwind CSS -->
+ 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Custom Styles -->
+    <style>
+      .custom-background {
+        background-image: url('satrs.jpeg'); /* Path to the image */
+        background-size: 1000px 1000px; /* Set specific size for the image */
+        background-position: center; /* Centers the image in the container */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        width: 100%; /* Full width of the parent container */
+        height: 100vh; /* Full viewport height */
+      }
+    </style>
+</head>
+<body class="bg-black">
+   
+    <header class="bg-purple-700 p-4 text-cyan-50">
+      <h6 class="text-center">Welcome to Nidz Games</h6>
+  </header>
+  <nav class="bg-black text-cyan-50">
+      <div class="container mx-auto flex justify-between items-center p-4">
+          <span class="text-xl font-bold">NidzGames</span>
+          <ul class="flex space-x-4">
+              <li class="relative dropdown">
+                  <a href="onemore.html" class="hover:bg-purple-700 px-3 py-2 rounded">Home</a>
+              </li>
+              <li class="relative dropdown">
+                  <a href="play.html" class="hover:bg-purple-700 px-3 py-2 rounded">Play now</a>
+                 
+              </li>
+              <li>
+                  <a href="contactus.html" class="ml-4 hover:bg-purple-700 px-3 py-2 rounded">Contact us</a>
+              </li>
+              <li>
+                  <a href="about.html" class="ml-4 hover:bg-purple-700 px-3 py-2 rounded">About</a>
+              </li>
+
+<li class="bg-purple-700 px-3 rounded">
+ <div class="relative" id="dropdownButton">
+        <div 
+        onclick="toggleDropdown()"
+        class="border-solid rounded w-20 px-5 cursor-pointer font-bold">
+            
+            
+            <div>Options</p></div>
+            
+        </div><div 
+        id="dropdown"
+        class="bg-purple-700 rounded  hover:bg-purple-700 absolute top-[40px] p-4 hidden">
+            <div class="cursor-pointer hover:bg-black">Accountsetting</div>
+            <div class="cursor-pointer hover:bg-black">Support</div>
+            <div class="cursor-pointer hover:bg-black">Lisence </div>
+            <div class="cursor-pointer hover:bg-black">SignOut</div>
+        </div></div>
+        <script>
+            function toggleDropdown(){
+                let dropdown=document.querySelector('#dropdownButton #dropdown');
+                dropdown.classList.toggle("hidden")
+            }
+        </script>
+    </body>
+</html>
+</li></ul>
+      </div>
+  </nav>
+ 
+To apply images to each grid item using Tailwind CSS, you can follow these steps:
+
+Add Images to the Grid Items:
+
+Use <img> tags inside each grid item to display an image.
+Optionally, you can also use background images through Tailwind's utilities if you want the images as backgrounds.
+Style the Grid Items:
+
+Ensure each grid item adjusts to the image size by setting appropriate width and height.
+Here’s how you can modify your grid to include images in each grid item:
+
+Example with <img> Tags
+html
+Copy code
+<div class="grid grid-cols-4 gap-2 grid-row ">
+    <div class="bg-slate-400 flex items-center justify-center h-66 w-66 ml-4">
+        <img src="mario-luigi-yoschi-figures-163036.webp" alt="Image 1" class="w-full h-full object-cover transition-transform duration-300 ease-in-out hover:translate-y-[-80px]">
+    </div>
+    <div class="bg-slate-400 flex items-center justify-center h-66 w-66 ">
+        <img src="download (2).jpeg" alt="Image 2" class="w-full h-full object-cover transition-transform duration-300 ease-in-out hover:translate-y-[-80px]">
+    </div>
+    <div class="bg-slate-400 flex items-center justify-center h-66 w-66">
+        <img src="download (3).jpeg" alt="Image 3" class="w-full h-full object-cover transition-transform duration-300 ease-in-out hover:translate-y-[-80px]">
+    </div>
+    <div class="bg-slate-400 flex items-center justify-center h-66 w-66">
+        <img src="download.jpeg" alt="Image 4" class="w-full h-full object-cover transition-transform duration-300 ease-in-out hover:translate-y-[-80px]">
+    </div>
+    <div class="bg-slate-400 flex items-center justify-center h-66 w-66 ml-4">
+        <img src="images (1).jpeg" alt="Image 5" class="w-full h-full object-cover transition-transform duration-300 ease-in-out hover:translate-y-[-80px]">
+    </div>
+    <div class="bg-gray-400 flex items-center justify-center h-66 w-66">
+        <img src="images (2).jpeg" alt="Image 6" class="w-full h-full object-cover transition-transform duration-300 ease-in-out hover:translate-y-[-80px]">
+    </div>
+    <div class="bg-gray-400 flex items-center justify-center h-66 w-66">
+        <img src="pexels-photo-3165335.jpeg" alt="Image 6" class="w-full h-full object-cover transition-transform duration-300 ease-in-out hover:translate-y-[-80px]">
+    </div>
+    <div class="bg-gray-400 flex items-center justify-center h-66 w-66">
+        <img src="download (1).jpeg" alt="Image 6" class="w-full h-full object-cover transition-transform duration-300 ease-in-out hover:translate-y-[-80px]">
+    </div>
+
+
+
+
+
+
+</div>
+</body>
+</html>
+
+
+      
+ 
+    <!-- Background Image Container -->
+    <div class="custom-background h-screen">
+        <!-- Your content here -->
+    </div>
+    
+</body>
+</html>

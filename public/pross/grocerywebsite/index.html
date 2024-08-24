@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GroceryWeb</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #aa4b6b, #6b6b83, #3b8d99);
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s ease infinite;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        nav {
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .nav-brand {
+            color: #333;
+            font-size: 1.5em;
+            padding: 10px;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+
+        .nav-brand strong {
+            color: #4CAF50;
+        }
+
+        .nav-link {
+            color: #333;
+            text-decoration: none;
+            padding: 10px;
+            display: inline-block;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .nav-link:hover {
+            color: #fff;
+            background-color: #4CAF50;
+            border-radius: 5px;
+            transform: scale(1.1);
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            z-index: 1000;
+            width: 90%;
+            max-width: 500px;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .popup.active {
+            display: block;
+        }
+
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .popup-overlay.active {
+            display: block;
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 1.5em;
+            color: #4CAF50;
+        }
+
+        .popup-close:hover {
+            color: #333;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            padding: 12px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            transition: border-color 0.3s ease;
+        }
+
+        .login-form input[type="text"]:focus,
+        .login-form input[type="password"]:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+        .login-form button {
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-form button:hover {
+            background-color: #45a049;
+        }
+
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .product-item {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 20px;
+            width: calc(25% - 20px);
+            box-sizing: border-box;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+        }
+
+        .product-image {
+            transition: transform 0.3s ease;
+            border-radius: 8px;
+        }
+
+        .product-image:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.2);
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 100% 100%; }
+            100% { background-position: 0% 0%; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to NidzGrocery</h1>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <div class="nav-brand">
+                <strong>Nidz</strong> <strong>Grocery</strong>
+            </div>
+            <div>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="features.html" class="nav-link">Features</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="categories.html" class="nav-link">Categories</a>
+                <a href="reviews.html" class="nav-link">Reviews</a>
+                <a href="#" class="nav-link" id="loginButton">Login</a>
+                <a href="#" class="nav-link" style="font-size: 1.5em;">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Popup for Login Form -->
+    <div class="popup-overlay" id="popupOverlay"></div>
+    <div class="popup" id="loginPopup">
+        <span class="popup-close" id="popupClose">&times;</span>
+        <h2>Login</h2>
+        <form class="login-form">
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <main style="padding: 20px;">
+        <h2 style="color: #4CAF50; text-align: center;">Featured Products</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="istockphoto-1757979214-170667a.webp" alt="Fresh Apples" class="product-image" style="width: 100%;">
+                <h3 style="color: #333;"></h3>
+                <p style="color: #555;">$3.99 per lb</p>
+            </div>
+            <div class="product-item">
+                <img src="indian-masala-chai-tea-hot-260nw-2171050831.webp" alt="Masala Chai Tea" class="product-image" style="width: 100%;">
+                <h3 style="color: #333;"></h3>
+                <p style="color: #555;">$5.99 per box</p>
+            </div>
+            <div class="product-item">
+                <img src="cheese-5179968_640.jpg" alt="Green Beans" class="product-image" style="width: 100%;">
+                <h3 style="color: #333;"></h3>
+                <p style="color: #555;">$2.49 per lb</p>
+            </div>
+            <div class="product-item">
+                <img src="bread-cut-14027607.webp" alt="Coconut Water" class="product-image" style="width: 100%;">
+                <h3 style="color: #333;"></h3>
+                <p style="color: #555;">$4.99 per bottle</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NidzGrocery. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('loginButton').addEventListener('click', function() {
+            document.getElementById('popupOverlay').classList.add('active');
+            document.getElementById('loginPopup').classList.add('active');
+        });
+
+        document.getElementById('popupClose').addEventListener('click', function() {
+            document.getElementById('popupOverlay').classList.remove('active');
+            document.getElementById('loginPopup').classList.remove('active');
+        });
+
+        document.getElementById('popupOverlay').addEventListener('click', function() {
+            document.getElementById('popupOverlay').classList.remove('active');
+            document.getElementById('loginPopup').classList.remove('active');
+        });
+    </script>
+</body>
+</html>

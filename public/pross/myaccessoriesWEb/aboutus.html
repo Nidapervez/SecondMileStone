@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - NidzWebs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/scrollreveal@4"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #4a4a4a; /* Text color for better contrast */
+            margin: 0;
+            padding: 0;
+            background-color: pink;
+        }
+        header {
+            background:pink;
+            color:gray;
+            padding: 20px; /* Adjusted padding */
+            min-height: 60px;
+            border-bottom: #e8491d 3px solid;
+            text-align: center;
+            position: relative;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .main-content {
+            background:pink
+            padding: 20px;
+            margin: 0 auto;
+            border-radius: 5px;
+            max-width: 800px; /* Added max-width for better layout control */
+        }
+        h2 {
+            color:gray;
+            margin-top: 20px; /* Added margin for spacing */
+        }
+        p {
+            margin: 0 0 15px 0;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .nav-container a {
+            color:pink; /* Adjust text color to match body color */
+        }
+        .nav-container a:hover {
+            color:gray; /* Change color on hover */
+        }
+    </style>
+</head>
+<body class="bg-pink-200 text-gray-600">
+    <header class="bg-pink-200 text-gray-700">
+        <div class="min-h-screen px-6 py-3 flex flex-col gap-10 md:px-10 lg:px-16 lg:py-7">
+            <header class="flex justify-between items-center bg-white p-4">
+                <a href="" class="flex items-center">
+                    <h1 class="text-4xl font-bold">NidzWEbs</h1>
+                </a>
+                <nav class="hidden lg:flex lg:items-center lg:gap-10 lg:text-lg lg:font-medium">
+                    <ul class="flex gap-4">
+                        <li class="hover:bg-purple-950 px-3 py-2 rounded"><a href="index.html">Home</a></li>
+                        <li class="hover:bg-purple-950 px-3 py-2 rounded"><a href="services.html">Shop now</a></li>
+                        <li class="hover:bg-purple-950 px-3 py-2 rounded"><a href="aboutus.html">AboutUs</a></li>
+                        <li class="hover:bg-purple-950 px-3 py-2 rounded"><a href="contactus.html">ContactUs</a></li>
+                    </ul>
+                </nav>
+                <div class="flex gap-4 items-center">
+                    <button class="bg-purple-800 px-4 py-2 font-medium rounded-md text-white"><a href="login.html">Login</a></button>
+                    <button class="bg-purple-800 px-4 py-2 font-medium rounded-md text-white"><a href="register.html">Register</a></button>
+                    <i class="fa-solid fa-bars fa-2x text-gray-800 lg:hidden"></i>
+                </div>
+    </header>
+
+    <div class="main-content">
+        <h2>Welcome to NidzWebs!</h2>
+        <p>At NidzWebs, we believe that shopping should be as dynamic and individual as you are. Our e-commerce platform is built on the idea that quality products and outstanding customer service go hand-in-hand. Our mission is to bring you a carefully curated selection of items that meet the highest standards and fit seamlessly into your life.</p>
+
+        <h2>Our Story</h2>
+        <p>NidzWebs was founded with a clear vision: to create an online shopping experience that stands out for its quality and customer-focused approach. What started as a passionate endeavor by a small team dedicated to redefining e-commerce has blossomed into a thriving platform. Our journey has been fueled by a commitment to delivering exceptional products and an unwavering focus on customer satisfaction.</p>
+
+        <h2>What Sets Us Apart</h2>
+        <ul>
+            <li><strong>Curated Selection:</strong> At NidzWebs, we handpick every item in our inventory. Our team carefully selects products that blend quality, innovation, and style to offer you the best choices available.</li>
+            <li><strong>Customer-Centric Approach:</strong> We put you at the heart of everything we do. From easy-to-use navigation and secure checkout processes to responsive support, we’re here to ensure your shopping experience is seamless and enjoyable.</li>
+            <li><strong>Sustainability:</strong> We care about the planet. Many of our products come from eco-friendly brands that share our commitment to sustainable practices. We're constantly seeking ways to reduce our environmental impact and support responsible consumption.</li>
+        </ul>
+
+        <h2>Our Promise</h2>
+        <p>When you shop with NidzWebs, you can expect:</p>
+        <ul>
+            <li><strong>Quality:</strong> We are dedicated to providing products that meet the highest standards of excellence. Every item undergoes thorough quality checks to ensure it exceeds your expectations.</li>
+            <li><strong>Value:</strong> We aim to offer exceptional value, combining quality with affordability. You can trust that you’re getting the best possible deal without compromising on quality.</li>
+            <li><strong>Service:</strong> From the moment you visit our site to the delivery of your purchase, our friendly and knowledgeable team is here to assist you. Your satisfaction is our top priority.</li>
+        </ul>
+
+        <h2>Join Us on Our Journey</h2>
+        <p>We’re thrilled to have you with us. Explore our diverse range of products, stay updated with the latest trends, and enjoy exclusive offers by following us on social media and subscribing to our newsletter.</p>
+        <p>Thank you for choosing NidzWebs. We look forward to making your shopping experience exceptional!</p>
+
+        <p>Warm regards,</p>
+        <p>The NidzWebs Team</p>
+    </div>
+
+    <script>
+        const scroll = ScrollReveal({
+            reset: true,
+            duration: 2600,
+            distance: '60px'
+        });
+        scroll.reveal('.image-transform', { delay: 200, origin: 'top' });
+        scroll.reveal('.text-transform', { delay: 500, origin: 'left' });
+    </script>
+</body>
+</html>

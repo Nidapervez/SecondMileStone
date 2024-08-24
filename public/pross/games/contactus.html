@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nidzgames</title>
+
+    <!-- Include Tailwind CSS -->
+ 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Custom Styles -->
+    <header class="bg-purple-700 p-4 text-cyan-50">
+        <h6 class="text-center">Welcome to Nidz Games</h6>
+    </header>
+    <nav class="bg-black text-cyan-50">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <span class="text-xl font-bold">NidzGames</span>
+            <ul class="flex space-x-4">
+                <li class="relative dropdown">
+                    <a href="onemore.html" class="hover:bg-purple-700 px-3 py-2 rounded">Home</a>
+                </li>
+                <li class="relative dropdown">
+                    <a href="play.html" class="hover:bg-purple-700 px-3 py-2 rounded">Play now</a>
+                   
+                </li>
+                <li>
+                    <a href="contactus.html" class="ml-4 hover:bg-purple-700 px-3 py-2 rounded">Contact us</a>
+                </li>
+                <li>
+                    <a href="about.html" class="ml-4 hover:bg-purple-700 px-3 py-2 rounded">About</a>
+                </li></ul></div></nav>
+    
+        <div class="relative mt-20 ml-[600px]" id="dropdownButton">
+               <div 
+               onclick="toggleDropdown()"
+               class="border-solid rounded w-20 px-5 cursor-pointer font-bold">
+                   
+                   
+                   <div> <button class="bg-pink-500 w-40 rounded ">click here for more options</button></p></div>
+                   
+               </div><div 
+               id="dropdown"
+               class="bg-purple-700 rounded  hover:bg-purple-700 absolute top-[40px] p-4 hidden">
+                   <div class="cursor-pointer hover:bg-pink-500">Downloading</div>
+                   <div class="cursor-pointer hover:bg-pink-500">Online gaming</div>
+                   <div class="cursor-pointer hover:bg-pink-500">Bonuses </div>
+                   <div class="cursor-pointer hover:bg-pink-500">Buy Games</div>
+               </div></div>
+               <img src="pexels-photo-459762.webp" class="ml-8">
+               <script>
+                   function toggleDropdown(){
+                       let dropdown=document.querySelector('#dropdownButton #dropdown');
+                       dropdown.classList.toggle("hidden")
+                   }
+               </script>

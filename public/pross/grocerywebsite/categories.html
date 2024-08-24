@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - NidzGrocery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: black;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .nav-brand strong {
+            color: #4CAF50;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: black;
+            background-color: white;
+            border-radius: 4px;
+        }
+
+        main {
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+
+        h1, h2 {
+            color: #4CAF50;
+        }
+
+        .category-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .category {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 15px;
+            width: calc(25% - 20px);
+            box-sizing: border-box;
+            transition: transform 0.3s ease;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .category img {
+            width: 100%;
+            border-radius: 4px;
+            transition: transform 0.3s ease;
+        }
+
+        .category img:hover {
+            transform: scale(1.05);
+        }
+
+        .category h3 {
+            margin-top: 10px;
+            color: #333;
+        }
+
+        .category p {
+            color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Product Categories</h1>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <div class="nav-brand">
+                <strong>Nidz</strong> <strong>Grocery</strong>
+            </div>
+            <div>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="features.html" class="nav-link">Features</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="categories.html" class="nav-link">Categories</a>
+                <a href="reviews.html" class="nav-link">Reviews</a>
+                <a href="#" class="nav-link" id="loginButton">Login</a>
+                <a href="#" class="nav-link" style="font-size: 1.5em;">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <h2>Browse by Category</h2>
+        <div class="category-grid">
+            <!-- Category 1 -->
+            <div class="category" onclick="window.location.href='products.html?category=fruits'">
+                <img src="fruit.jpeg" alt="Fruits">
+                <h3>Fruits</h3>
+                <p>Fresh and juicy fruits for your health.</p>
+            </div>
+
+            <!-- Category 2 -->
+            <div class="category" onclick="window.location.href='products.html?category=vegetables'">
+                <img src="veg.jpg"/>
+                <h3>Vegetables</h3>
+                <p>Nutritious vegetables for your meals.</p>
+            </div>
+
+            <!-- Category 3 -->
+            <div class="category" onclick="window.location.href='products.html?category=dairy'">
+                <img src="da.jpg" alt="Dairy">
+                <h3>Dairy</h3>
+                <p>Fresh dairy products including milk, cheese, and more.</p>
+            </div>
+
+            <!-- Category 4 -->
+            <div class="category" onclick="window.location.href='products.html?category=snacks'">
+                <img src="images (2).jpeg" alt="Snacks">
+                <h3>Snacks</h3>
+                <p>Delicious snacks for every taste.</p>
+            </div>
+
+            <!-- Category 5 -->
+            <div class="category" onclick="window.location.href='products.html?category=bakery'">
+                <img src="ba.jpeg" alt="Bakery">
+                <h3>Bakery</h3>
+                <p>Freshly baked bread, cakes, and pastries.</p>
+            </div>
+
+            <!-- Category 6 -->
+            <div class="category" onclick="window.location.href='products.html?category=beverages'">
+                <img src="bav.jpeg" alt="Beverages">
+                <h3>Beverages</h3>
+                <p>Refreshing drinks for all occasions.</p>
+            </div>
+
+            <!-- Category 7 -->
+            <div class="category" onclick="window.location.href='products.html?category=meat'">
+                <img src="meat.jpg" alt="Meat">
+                <h3>Meat</h3>
+                <p>Quality meat products for your recipes.</p>
+            </div>
+
+            <!-- Category 8 -->
+            <div class="category" onclick="window.location.href='products.html?category=grains'">
+                <img src="gr.jpg" alt="Grains">
+                <h3>Grains</h3>
+                <p>Whole grains and cereals for a balanced diet.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NidzGrocery. All rights reserved.</p>
+    </footer>
+</body>
+</html>

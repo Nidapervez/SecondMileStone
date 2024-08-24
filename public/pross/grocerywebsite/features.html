@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - NidzGrocery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: black;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .nav-brand strong {
+            color: #4CAF50;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: black;
+            background-color: white;
+            border-radius: 4px;
+        }
+
+        main {
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+
+        h1, h2 {
+            color: #4CAF50;
+        }
+
+        .feature {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .feature img {
+            width: 100%;
+            border-radius: 4px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature img:hover {
+            transform: scale(1.05);
+        }
+
+        .feature h3 {
+            margin-top: 10px;
+            color: #333;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .feature-icon {
+            font-size: 2em;
+            color: #4CAF50;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Features of NidzGrocery</h1>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <div class="nav-brand">
+                <strong>Nidz</strong> <strong>Grocery</strong>
+            </div>
+            <div>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="features.html" class="nav-link">Features</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="categories.html" class="nav-link">Categories</a>
+                <a href="reviews.html" class="nav-link">Reviews</a>
+                <a href="#" class="nav-link" id="loginButton">Login</a>
+                <a href="#" class="nav-link" style="font-size: 1.5em;">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="feature">
+            <h2><i class="feature-icon fas fa-truck"></i> Fast Delivery</h2>
+            <p>We ensure quick and reliable delivery of all your grocery needs, so you never have to wait long for your essentials.</p>
+            <img src="fast-delivery.jpg" alt="Fast Delivery">
+        </section>
+
+        <section class="feature">
+            <h2><i class="feature-icon fas fa-dollar-sign"></i> Best Prices</h2>
+            <p>Our grocery store offers competitive prices on all products. We work hard to provide the best deals for you.</p>
+            <img src="best-prices.jpg" alt="Best Prices">
+        </section>
+
+        <section class="feature">
+            <h2><i class="feature-icon fas fa-heart"></i> Quality Products</h2>
+            <p>We source only the highest quality products for your kitchen. Freshness and quality are our top priorities.</p>
+            <img src="quality-products.jpg" alt="Quality Products">
+        </section>
+
+        <section class="feature">
+            <h2><i class="feature-icon fas fa-headset"></i> Excellent Customer Service</h2>
+            <p>Our friendly and knowledgeable customer service team is always here to help you with any inquiries or concerns.</p>
+            <img src="customer-service.jpg" alt="Customer Service">
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NidzGrocery. All rights reserved.</p>
+    </footer>
+</body>
+</html>
