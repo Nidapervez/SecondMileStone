@@ -19,20 +19,20 @@ const Project = () => {
             <Image
               alt="gallery"
               className="absolute inset-0 w-full h-full object-cover object-center"
-              src={require('../../../public/ga.jpg')}
+              src={require('../../../public/timer.jpg')}
             />
             <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
               <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
-                Gaming Project
+                Timer Project
               </h2>
               <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                Gaming
+                Count Down Timer
               </h1>
               <p className="leading-relaxed line-clamp-2">
-              This website project is centered around gaming and is designed specifically for individuals who run gaming businesses.
+              This  project is the timer project with different functionality.
               </p>
               <Link target="_blank"
-              href={""}>
+              href={"https://counter1st-project.vercel.app/"}>
               <p className="leading-relaxed text-indigo-500 mb-1 hover:underline">
               View Project</p> </Link >
             
