@@ -6,7 +6,7 @@ import { FaCloudDownloadAlt } from "react-icons/fa";;
 
 const Navbar = () => {
   return (
-    <div className=' z-50 sticky top-0'><header className="text-white body-font bg-gradient-to-r from-fuchsia-600 to-pink-600">
+    <div className=' z-50 sticky top-0'><header className="text-white body-font bg-gray-500">
     <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
       <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
        <Image src={require("../../../public/nidzzzzz.jpg")} alt="nidaportpolio" width={40} height={30}/>
